@@ -10,7 +10,8 @@ which is an object that is common to all instances of that class.
 It’d come to be similar to static fields in Java. */
 object Constants{
     val TAG:String = "android-Kotlin"
-    val ActivityA_RequestCode = 200
+    val ContactsA_RequestCode = 200
+    val PagerA_RequestCode = 300
     val MOBILENUM_FRAGTAG: String = "MOBILENUM_FRAGTAG"
     val USERINFO_FRAGTAG: String = "USERINFOG_FRAGTAG"
     val MESSAGE: String = "MESSAGE"

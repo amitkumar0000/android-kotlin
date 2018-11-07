@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import com.android.kotlin.ui.activity.Contacts
+import com.android.kotlin.ui.activity.PagerActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -16,14 +17,27 @@ class MainActivity : AppCompatActivity() {
         Log.d(Constants.TAG," onCreate ")
     }
 
-    private fun startActivityA() {
-        var intent = Intent(this, Contacts::class.java)
-        startActivityForResult(intent,Constants.ActivityA_RequestCode)
-    }
-
     fun onClick(v: View){
         when(v.id){
-            R.id.activityA -> startActivityA()
+            R.id.activityA -> startContactsActivity()
+            R.id.pagerbtn -> startPagerActivity()
+        }
+    }
+
+    private fun startContactsActivity() {
+        var intent = Intent(this, Contacts::class.java)
+        startActivityForResult(intent,Constants.ContactsA_RequestCode)
+    }
+
+    private fun startPagerActivity(){
+        startActivityForResult(Intent(this,PagerActivity::class.java),Constants.PagerA_RequestCode)
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        when(requestCode){
+            Constants.ContactsA_RequestCode -> {}
+            Constants.PagerA_RequestCode -> {}
         }
     }
 }

@@ -24,8 +24,19 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="52dp"
         android:onClick="onClick"
-        android:text="ActivityA"
+        android:text="Contacts"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/pagerbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="42dp"
+        android:layout_marginStart="42dp"
+        android:text="Pager"
+        android:onClick="onClick"
+        app:layout_constraintBaseline_toBaselineOf="@+id/activityA"
+        app:layout_constraintStart_toEndOf="@+id/activityA" />
 
 </android.support.constraint.ConstraintLayout>

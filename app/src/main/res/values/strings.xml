@@ -3,4 +3,7 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="RED">ff6659</string>
+    <string name="GREEN">#6abf69</string>
+    <string name="BLUE">#5eb8f</string>
 </resources>
